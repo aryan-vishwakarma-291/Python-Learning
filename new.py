@@ -345,11 +345,60 @@ dictionary = {
 # phonebook["Alice"] = 1234567890
 # print(phonebook)
 # del phonebook["Alice"]
-# print(phonebook)
+# # print(phonebook)
 
-pol_eng_dictionary = {"kwiat": "flower"}
-pol_eng_dictionary.update({"gleba": "soil"})
-print(pol_eng_dictionary) # outputs: {'kwiat': 'flower', 'gleba': 'soil'}
-pol_eng_dictionary.popitem()
-print(pol_eng_dictionary) # outputs: {'kwiat': 'flower'}
-print("aryan")
+# pol_eng_dictionary = {"kwiat": "flower"}
+# pol_eng_dictionary.update({"gleba": "soil"})
+# print(pol_eng_dictionary) # outputs: {'kwiat': 'flower', 'gleba': 'soil'}
+# pol_eng_dictionary.popitem()
+# print(pol_eng_dictionary) # outputs: {'kwiat': 'flower'}
+# print("aryan")
+
+# pol_eng_dictionary = {
+#     "zamek": "castle",
+#     "woda": "water",
+#     "gleba": "soil",
+#     1: "one",
+#     }
+# if 1 in pol_eng_dictionary:
+#    print("Yes it is present in the dectionary")
+# else:
+#    print("No it is not present in the dictionary")
+
+# pol_eng_dictionary = {
+#     "zamek": "castle",
+#     "woda": "water",
+#     "gleba": "soil"
+#     }
+# print(pol_eng_dictionary) # outputs: {'zamek': 'castle', 'woda': 'water', 'gleba': 'soil'}
+# print(len(pol_eng_dictionary)) # outputs: 3
+# del pol_eng_dictionary["woda"]
+# print(pol_eng_dictionary) # outputs: {'zamek': 'castle', 'gleba': 'soil'}
+# print(len(pol_eng_dictionary)) # outputs: 2
+# pol_eng_dictionary.clear()
+# print(pol_eng_dictionary) # outputs: {}
+# print(len(pol_eng_dictionary)) # This will raise an error because the dictionary has been deleted.
+
+# dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+# dictionary['cat'] = 'minou'
+# print(dictionary)
+
+sd = {}
+while True:
+   name = input("Enter name: ")
+   if name == "":
+       break
+   score = int(input("Enter score: "))
+   if score not in range(1,11):
+      break
+
+   if name in sd:
+      sd[name] += (score,)
+   else:
+      sd[name] = (score,)
+
+for name, marks in sd.items():
+   sum = 0
+   for mark in marks:
+      sum += mark
+   print(name, "->", sum/len(marks))  
