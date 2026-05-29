@@ -279,6 +279,9 @@
 # t1, t2, t3 = t2, t3, t1
 # print(t1, t2, t3)
 
+from os import name
+
+
 dictionary = {
 "cat": "chat", 
 "dog": "chien", 
@@ -383,22 +386,67 @@ dictionary = {
 # dictionary['cat'] = 'minou'
 # print(dictionary)
 
-sd = {}
-while True:
-   name = input("Enter name: ")
-   if name == "":
-       break
-   score = int(input("Enter score: "))
-   if score not in range(1,11):
-      break
+# sd = {}
+# while True:
+#    name = input("Enter name: ")
+#    if name == "":
+#        break
+#    score = int(input("Enter score: "))
+#    if score not in range(1,11):
+#       break
 
-   if name in sd:
-      sd[name] += (score,)
-   else:
-      sd[name] = (score,)
+#    if name in sd:
+#       sd[name] += (score,)
+#    else:
+#       sd[name] = (score,)
 
-for name, marks in sd.items():
-   sum = 0
-   for mark in marks:
-      sum += mark
-   print(name, "->", sum/len(marks))  
+# for name, marks in sd.items():
+#    sum = 0
+#    for mark in marks:
+#       sum += mark
+#    print(name, "->", sum/len(marks))  
+
+# object oriented programming
+
+# class ThisIsAClass:  # class name should be in camel case
+#       name = "Aryan"
+#       age = 22
+
+#       def getname(self): # method should have self as the first parameter
+#            print(self.name) # self is a reference to the current instance of the class, and it allows us to access the attributes and methods of the class within its own definition.
+          
+# first_object = ThisIsAClass() # creating an instance of the class
+
+# first_object.getname() # outputs: Aryan
+# print(first_object.name) # outputs: Aryan
+
+class Student:
+      def __init__(self,name,age,gender,grade): # this is a constructor, it is called when an instance of the class is created
+            self.name = name
+            self.age = age
+            self.gender = gender
+            self.grade = grade
+
+      def printDetails(self): # this is a method, it is a function that belongs to a class
+            print("Name:", self.name)
+            print("Age:", self.age)
+            print("Gender:", self.gender)
+            print("Grade:", self.grade) 
+
+# mayur = Student()
+# print(mayur)
+
+# mayur.name = "Mayur"
+# mayur.age = 21
+# mayur.gender = "Male"
+# mayur.grade = "A"
+
+# print(mayur.name) # outputs: Mayur
+# print(mayur.age) # outputs: 21
+# print(mayur.gender) # outputs: Male
+# print(mayur.grade) # outputs: A
+
+mayur = Student("Mayur", 21 ,"Male", "A")
+mayur.printDetails()
+
+
