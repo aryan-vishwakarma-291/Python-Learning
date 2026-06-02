@@ -455,18 +455,134 @@ class Student:
 
 
 # insance variable
-class ExampleClass:
-    def __init__(self, val = 1):
-        self.first = val
+# class ExampleClass:
+#     def __init__(self, val = 1):
+#         self.first = val
  
-    def set_second(self, val):
-        self.second = val
-example_object_1 = ExampleClass()
-example_object_2 = ExampleClass(2)
-example_object_2.set_second(3)
-example_object_3 = ExampleClass(4)
-example_object_3.third = 5
+#     def set_second(self, val):
+#         self.second = val
+# example_object_1 = ExampleClass()
+# example_object_2 = ExampleClass(2)
+# example_object_2.set_second(3)
+# example_object_3 = ExampleClass(4)
+# example_object_3.third = 5
 # print(example_object_1.__dict__)
 # print(example_object_2.__dict__)
 # print(example_object_3.__dict__)
-print(example_object_3.third) 
+# print(example_object_3.third) 
+
+
+#OOPS Methods
+
+# class Classy:
+#     def method(self):
+#         print("method")
+# obj = Classy()
+# obj.method()  
+ 
+# class Classy:
+#      def method(self,par):
+#           print("method: ", par)
+# obj = Classy()
+# obj.method("hello")
+
+# class Classy:
+#       varia = 2
+#       def method(self):
+#             print( self.varia, self.var)
+
+# obj = Classy()
+# obj.var = 3
+# obj.method()
+
+# class Star:
+#     def __init__(self, name, galaxy):
+#         self.name = name
+#         self.galaxy = galaxy
+# sun = Star("Sun", "Milky Way")
+# print(sun)
+
+# class Star:
+#     def __init__(self, name, galaxy):
+#         self.name = name
+#         self.galaxy = galaxy
+    
+#     def __str__(self):
+#         return self.name + ' in ' + self.galaxy
+# sun = Star("Sun" , "Milky Way")
+# print(sun)
+
+
+#INheritance
+
+# class Vehicle:
+#       pass
+# class LandVehicle(Vehicle):
+#       pass
+# class TrackedVehicle(LandVehicle):
+#       pass
+ 
+
+# class Vehicle:
+#       pass
+# class LandVehicle(Vehicle):
+#       pass
+# class TrackedVehicle(LandVehicle):
+#       pass
+# for cls1 in [Vehicle, LandVehicle, TrackedVehicle]:                  
+#       for cls2 in [Vehicle, LandVehicle, TrackedVehicle]  :  
+#             print(issubclass(cls1, cls2), end = "\t")
+#       print()
+
+# class Super:
+#       super_var = 1
+# class Sub(Super):
+#       sub_var = 2
+
+# obj = Sub()
+# obj1 = Super()
+# print(obj1.super_var) # outputs: 1
+# print(obj1.sub_var) # This will raise an error because sub_var is not defined in the Super class.
+# print(obj.super_var) # outputs: 1
+# print(obj.sub_var) # outputs: 2
+
+#for contructor 
+# class Super:
+#         def __init__(self):
+#             self.supVar = 1
+# class Sub(Super):
+#         def __init__(self):
+#             super().__init__() # this will call the constructor of the Super class and initialize the supVar variable
+#             self.subVar = 2
+
+# obj = Sub()
+# print(obj.supVar) # outputs: 1
+# print(obj.subVar) # outputs: 2
+
+class Level1:
+    variable_1 = 100
+    def __init__(self):
+        self.var_1 = 101
+    def fun_1(self):
+        return 102
+    
+class Level2(Level1):
+    variable_2 = 200
+    def __init__(self):
+        super().__init__()
+        self.var_2 = 201
+    def fun_2(self):
+        return 202
+    
+class Level3(Level2):
+    variable_3 = 300
+    def __init__(self):
+        super().__init__()
+        self.var_3 = 301
+    def fun_3(self):
+        return 302
+obj = Level3()
+print(obj.variable_1 , obj.var_1, obj.fun_1()) 
+print(obj.variable_2 , obj.var_2, obj.fun_2()) 
+print(obj.variable_3 , obj.var_3, obj.fun_3()) 
+
