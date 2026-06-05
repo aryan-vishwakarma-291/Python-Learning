@@ -104,6 +104,86 @@
 # print(var > 0)
 # print(not (var <= 0))
 
-i = 1
-j = not not i
-print(j)
+# i = 1
+# j = not not i
+# print(j)
+
+#lists
+
+number = [1,2,3] #declaration 
+# print(number) # initialisation
+# print(number[0]) #print value at index 0
+
+# number[0] = 101 # assign value at index 0
+# print(number)
+
+# number[0] = number[2] #copy value at index 2 to index 0
+# print(number)
+
+# print(len(number)) # to print number od elements in a list
+
+# del number[0] # to delete a nubmer at index 0
+# print(number)
+
+# print(number[-1])
+
+number.append(4)
+# print(number)
+
+# number.insert(1,5)
+# print(number)
+
+# traversing through a list
+# for item in range(len(number)):
+#     print(item)
+
+# list1 = []
+# for i in range(1,11):
+#     list1.append(i)
+
+# for i in range(len(list1)):
+    # print(list1[i])
+
+# my_list = [10, 1, 8, 3, 5]
+# total = 0
+# for i in my_list:
+#     total += i
+# print(total)
+
+
+# variable_1 = 1
+# variable_2 = 2
+
+# variable_1 , variable_2 = variable_2 , variable_1 #to interchange value by copying
+# print(variable_1)
+# print(variable_2)
+
+
+# my_list = [10, 1, 8, 3, 5]
+# my_list[0], my_list[4] = my_list[4], my_list[0]
+# my_list[1], my_list[3] = my_list[3], my_list[1]
+# print(my_list)
+
+
+# my_list = [8, 10, 6, 2, 4]
+# my_list.sort()
+# print(my_list)
+
+
+# lst = [5, 3, 1, 2, 4]
+# print(lst)
+# lst.reverse()
+# print(lst)  # outputs: [4, 2, 1, 3, 5
+
+# lst = ["D", "F", "A", "Z"]
+# lst.sort()
+# print(lst)
+
+# list_1 = [1]
+# list_2 = list_1[:]
+# list_1[0] = 2
+# print(list_2)
+
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[1:3]
+print(new_list)
