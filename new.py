@@ -559,30 +559,147 @@ class Student:
 # print(obj.supVar) # outputs: 1
 # print(obj.subVar) # outputs: 2
 
-class Level1:
-    variable_1 = 100
-    def __init__(self):
-        self.var_1 = 101
-    def fun_1(self):
-        return 102
+# class Level1:
+#     variable_1 = 100
+#     def __init__(self):
+#         self.var_1 = 101
+#     def fun_1(self):
+#         return 102
     
-class Level2(Level1):
-    variable_2 = 200
-    def __init__(self):
-        super().__init__()
-        self.var_2 = 201
-    def fun_2(self):
-        return 202
+# class Level2(Level1):
+#     variable_2 = 200
+#     def __init__(self):
+#         super().__init__()
+#         self.var_2 = 201
+#     def fun_2(self):
+#         return 202
     
-class Level3(Level2):
-    variable_3 = 300
-    def __init__(self):
-        super().__init__()
-        self.var_3 = 301
-    def fun_3(self):
-        return 302
-obj = Level3()
-print(obj.variable_1 , obj.var_1, obj.fun_1()) 
-print(obj.variable_2 , obj.var_2, obj.fun_2()) 
-print(obj.variable_3 , obj.var_3, obj.fun_3()) 
+# class Level3(Level2):
+#     variable_3 = 300
+#     def __init__(self):
+#         super().__init__()
+#         self.var_3 = 301
+#     def fun_3(self):
+#         return 302
+# obj = Level3()
+# print(obj.variable_1 , obj.var_1, obj.fun_1()) 
+# print(obj.variable_2 , obj.var_2, obj.fun_2()) 
+# print(obj.variable_3 , obj.var_3, obj.fun_3()) 
+
+
+#class variables
+
+# class ExampleClass:
+#     counter = 0
+#     def __init__(self, val = 1):
+#         self.__first = val
+#         ExampleClass.counter += 1
+# example_object_1 = ExampleClass()
+# example_object_2 = ExampleClass(2)
+# example_object_3 = ExampleClass(4)
+# print(example_object_1.__dict__, example_object_1.counter)
+# print(example_object_2.__dict__, example_object_2.counter)
+# print(example_object_3.__dict__, example_object_3.counter)
+
+# class ExampleClass:
+#     def __init__(self, val):
+#         if val % 2 != 0:
+#             self.a = 1
+#         else:
+#             self.b = 1
+# example_object = ExampleClass(1)
+# print(example_object.a)
+# print(example_object.b)
+
+
+
+# class ExampleClass:
+#     def __init__(self, val):
+#         if val % 2 != 0:
+#             self.a = 1
+#         else:
+#             self.b = 1
+# example_object = ExampleClass(2)
+# print(example_object.a)
+# try:
+#     print("a=", example_object.a)
+# except AttributeError:
+#     try:
+#         print("b=", example_object.b)
+#     except AttributeError:
+#         print("The object does not have the attribute 'b'")
+
+
+# class ExampleClass:
+#     def __init__(self, val):
+#         if val % 2 != 0:
+#             self.a = 1
+#         else:
+#             self.b = 1
+# example_object = ExampleClass(1)
+# # print(example_object.a)
+ 
+# if hasattr(example_object, 'b'):
+#     print("b=", example_object.b)
+# if hasattr(example_object, 'a'):
+#     print("a=", example_object.a)
+
+# class ExampleClass:
+#     a = 1
+#     def __init__(self):
+#         self.b = 2
+# example_object = ExampleClass()
+# print(hasattr(example_object, 'b'))
+# print(hasattr(example_object, 'a'))
+# print(hasattr(ExampleClass, 'b'))
+# print(hasattr(ExampleClass, 'a'))
+
+
+# class Python:
+#       population = 1000000000
+#       victims = 0
+#       def __init__(self):
+#             self.length = 1
+#             self.__weight = 1
+# myobj = Python()
+# print(myobj.length)
+# print(myobj._Python__weight) # this is how we can access the private variable __weight outside the class using name mangling
+# print(myobj.population)
+# print(myobj.victims)
+
+# Name Mangling in Methods
+# class Classy:
+#     def visible(self):
+#         print("visible")
+#     def __hidden(self):
+#         print("hidden")
+# obj = Classy()
+# obj.visible()               # Output: visible
+# try:
+#     obj.__hidden()          # This fails
+# except:
+#     print("failed")         # Output: failed
+# obj._Classy__hidden() 
+
+# print(type(obj).__name__) # outputs: <class '__main__.Classy'>
+
+class sampleClass:
+    def __init__(self, val):
+        self.val = val
+obj1 = sampleClass(10)
+obj2 = sampleClass(20)
+obj3 = obj1
+obj3.val = 30
+
+print(obj1 is obj2) # outputs: False
+print(obj2 is obj3) # outputs: True
+print(obj3 is obj1) # outputs: True
+print(obj1.val) # outputs: 30
+print(obj2.val) # outputs: 20
+print(obj3.val) # outputs: 30
+
+str1 = "Hello new"
+str2 = "Hello"
+str2 += " new"
+print(str1 == str2 , str1 is str2) # outputs: False False
 
