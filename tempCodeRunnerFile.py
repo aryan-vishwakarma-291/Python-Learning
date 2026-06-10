@@ -1,3 +1,5 @@
-, 8, 6, 4, 2]
-# new_list = my_list[1:3]
-# print(new_list)
+pen('student.txt' , 'r') as  f:
+      for line in f:
+            name, marks , city = line.strip().split(',')
+            print(f'{name:<15} | {marks:>5} | {city}')
+            print("----------")

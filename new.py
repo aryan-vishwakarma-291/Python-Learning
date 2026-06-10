@@ -683,23 +683,242 @@ class Student:
 
 # print(type(obj).__name__) # outputs: <class '__main__.Classy'>
 
-class sampleClass:
-    def __init__(self, val):
-        self.val = val
-obj1 = sampleClass(10)
-obj2 = sampleClass(20)
-obj3 = obj1
-obj3.val = 30
+# class sampleClass:
+#     def __init__(self, val):
+#         self.val = val
+# obj1 = sampleClass(10)
+# obj2 = sampleClass(20)
+# obj3 = obj1
+# obj3.val = 30
 
-print(obj1 is obj2) # outputs: False
-print(obj2 is obj3) # outputs: True
-print(obj3 is obj1) # outputs: True
-print(obj1.val) # outputs: 30
-print(obj2.val) # outputs: 20
-print(obj3.val) # outputs: 30
+# print(obj1 is obj2) # outputs: False
+# print(obj2 is obj3) # outputs: True
+# print(obj3 is obj1) # outputs: True
+# print(obj1.val) # outputs: 30
+# print(obj2.val) # outputs: 20
+# print(obj3.val) # outputs: 30
 
-str1 = "Hello new"
-str2 = "Hello"
-str2 += " new"
-print(str1 == str2 , str1 is str2) # outputs: False False
+# str1 = "Hello new"
+# str2 = "Hello"
+# str2 += " new"
+# print(str1 == str2 , str1 is str2) # outputs: False False
+
+# class Super:
+#     def __init__(self, name):
+#         self.name = name
+    
+#     def __str__(self):
+#         return "My name is " + self.name + "."
+# class Sub(Super):
+#     def __init__(self, name):
+#       #   Super.__init__(self, name)
+#       super().__init__(name) # this is the recommended way to call the constructor of the Super class
+# obj = Sub("Andy")
+# print(obj)  # Output: My name is Andy.  
+
+#multiple inheritance
+# class SuperA:
+#     var_a = 10
+#     def fun_a(self):
+#         return 11
+    
+# class SuperB:
+#     var_b = 20
+#     def fun_b(self):
+#         return 21
+    
+# class Sub(SuperA, SuperB):
+#     pass
+# obj = Sub()
+
+# print(obj.var_a, obj.fun_a())  # Output: 10 11
+# print(obj.var_b, obj.fun_b())  # Output: 20 21
+
+# class Level1:
+#     var = 100
+#     def fun(self):
+#         return 101
+# class Level2(Level1):
+#     var = 200        # Overrides Level1.var
+#     def fun(self):   # Overrides Level1.fun()
+#         return 201
+# class Level3(Level2):
+#     def fun(self):   # Overrides Level2.fun()
+#         return 202
+# obj = Level3()
+# print(obj.var, obj.fun())  # Output: 200 202
+
+      
+# class Left:
+#     var = "L"
+#     var_left = "LL"
+#     def fun(self):
+#         return "Left"
+# class Right:
+#     var = "R"           # Same name as Left.var
+#     var_right = "RR"
+#     def fun(self):      # Same name as Left.fun()
+#         return "Right"
+# class Sub(Left, Right):
+#     pass
+# obj = Sub()
+# print(obj.var, obj.var_left, obj.var_right, obj.fun())
+
+# class One:
+#     def do_it(self):
+#         print("do_it from One")
+#     def doanything(self):
+#         self.do_it()
+# class Two(One):
+#     def do_it(self):
+#         print("do_it from Two")
+# one = One()
+# two = Two()
+# one.doanything()  # Output: do_it from One
+# two.doanything()  # Output: do_it from Two
+
+# # exceptions
+# def reciprocal(n):
+#     try:
+#         n = 1 / n
+#     except ZeroDivisionError:
+#         print("Division failed")
+#         return None
+#     else:
+#         print("Everything went fine")
+#         return n
+# print(reciprocal(2))  # Uses else branch
+# print(reciprocal(0))  # Uses except branch
+
+
+# def reciprocal(n):
+#     try:
+#         n = 1 / n
+#     except ZeroDivisionError:
+#         print("Division failed")
+#         n = None
+#     else:
+#         print("Everything went fine")
+
+#     finally:
+#             print("This is executed no matter what.")  
+#     return n
+
+# print(reciprocal(2))
+# print(reciprocal(0))
+
+# try:
+#     i = int("Hello!")
+# except Exception as e:
+#     print(e)
+#     print(e.__str__())
+
+
+
+# class MyZeroDivisionError(ZeroDivisionError):    
+#     pass
+# def do_the_division(mine):
+#     if mine:
+#         raise MyZeroDivisionError("some worse news")
+#     else:        
+#         raise ZeroDivisionError("some bad news")
+# do_the_division(False)
+
+#Stringss
+
+# str1 = "aryan"
+# print(str1[1])
+# print(str1[-1])
+
+# alpha = "abdefg"
+
+# print(alpha[1:3])
+# print(alpha[3:])
+# print(alpha[:3])
+# print(alpha[3:-2])
+# print(alpha[-3:4])
+# print(alpha[::2])
+# print(alpha[1::2])
+
+text = '  Hello Python World  '
+# print(text.upper())
+# print(text.lower())
+# print(text.title())
+# print(text.capitalize())
+
+# #strp whitedpaces
+
+# print(text.strip())
+
+# #search 
+# print('Python' in text)
+# print(text.find('Python'))
+# print(text.count('l'))
+
+# print(text.replace('Python' , 'ML'))
+
+# #Split and Join
+# csv = 'Aryan,22,Indore,Engineer'
+# parts = csv.split(',')
+# print(parts)
+# print(parts[0])
+# rejoined = ' | '.join(parts)
+# print(rejoined)
+
+# #check COntent
+# print('hello123'.isalnum())
+# print('1234'.isdigit())
+# print('Python'.isalpha())
+# print(" ".isspace())
+
+# #start and check
+# email = 'student@gmail.com'
+# print(email.endswith('.com'))
+# print(email.startswith('stu'))
+
+# name,marks,rank = 'Aryan' , 92.567,3
+
+# #basic
+# print(f'Hellow , {name}!')
+
+# print(f'Marks , {marks:.2f}')
+# print(f'Marks: {marks:.0f}')
+# print(f'Count: {100000:,}')
+
+# print(f'{name:<15} | {marks:>8.2f}|Rank:{rank}')
+
+# price , gst = 500 , 0.18
+# print(f'Price{price} | Gst{price*gst:.2f} | total {price*(1+gst):.2f}')
+
+# string = "Hellow, How are you doing today?"
+#count vowels in the string
+#print you from the string
+# print the string in reverse order
+# nonpali , palin = "abcdef" , "axttxa"
+#check if the string os palindrome or nor
+
+
+# readinf and writind csv,txt files
+
+# with open("data.txt" ,"r") as file:
+#       data = file.read()
+# print(data)
+
+# with open('student.txt' , 'w') as f:
+#       f.write('Rahul sharma,85,Bhopal\n')
+#       f.write('Priya Verma,92,Indore\n')
+#       f.write('Amit kumar,73,Jabalpur\n')
+
+# with open('student.txt' , 'a') as f:
+#       f.write('Sneha Joshi,88,Bhopal\n')
+# with open('student.txt', 'r') as f:
+#       content = f.read()
+# print(content)
+
+# with open('student.txt' , 'r') as  f:
+#       for line in f:
+#             name, marks , city = line.strip().split(',')
+#             print(f'{name:<15} | {marks:>5} | {city}')
+#             print("----------")
+
 
