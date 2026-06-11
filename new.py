@@ -891,6 +891,7 @@ text = '  Hello Python World  '
 # print(f'Price{price} | Gst{price*gst:.2f} | total {price*(1+gst):.2f}')
 
 # string = "Hellow, How are you doing today?"
+
 #count vowels in the string
 #print you from the string
 # print the string in reverse order
@@ -921,4 +922,48 @@ text = '  Hello Python World  '
 #             print(f'{name:<15} | {marks:>5} | {city}')
 #             print("----------")
 
+# creatin CSV files
+import csv 
+# records = [
+#       ['Name' , 'Marks' , 'City' , 'Grade'],
+#       ['Rahul' , 87 , 'Bhopal' , 'A'],
+#       ['Aryan' , 85 , 'Indore' , 'B'],
+#       ['Akash' , 89 , 'Ujjain' , 'C'],
+#       ['Aman' , 90 , 'Jabalpur' , 'A'],
+# ]
 
+# with open('students.csv' , 'w' , newline='') as f:
+#       csv.writer(f).writerows(records)
+
+# with open('students.csv' , 'r') as f:
+#       for row in csv.DictReader(f):
+#             print(f'{row["Name"]} :{row["Marks"]} Marks({"City"})')
+
+# StuRec = [
+#       ['Name' , 'Age' , 'Marks'],
+#       ['Aryan', 21 , '90'],
+#       ['Akash' , 20,  '85'],
+#       ['Aman' , 22 , '92'],
+# ]
+
+# with open('student.csv' , 'w' , newline='') as f:
+#       csv.writer(f).writerows(StuRec)
+# flag = 0
+# with open('student.csv' , 'r') as f:
+#       name = input("Enter Name of Student")
+#       for row in csv.DictReader(f):
+#             if row["Name"] == name:
+#                   flag = 1
+#                   break
+# if flag == 1:
+#        print(f'{row["Name"]} :{row["Marks"]} Marks({"City"})')
+# else:
+#       print("Record Not Found")
+
+import numpy as np
+arr1d = np.array([1,2,3,4,5])
+arr2d = np.array([[11,22,33],[44,55,66],[77,88,99]])
+print(arr2d.shape)
+print(arr2d.dtype)
+print(arr2d.ndim)
+         
