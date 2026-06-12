@@ -960,10 +960,62 @@ import csv
 # else:
 #       print("Record Not Found")
 
-import numpy as np
-arr1d = np.array([1,2,3,4,5])
-arr2d = np.array([[11,22,33],[44,55,66],[77,88,99]])
-print(arr2d.shape)
-print(arr2d.dtype)
-print(arr2d.ndim)
+# import numpy as np
+# arr1d = np.array([1,2,3,4,5])
+# arr2d = np.array([[11,22,33],[44,55,66],[77,88,99]])
+# print(arr2d.shape)
+# print(arr2d.dtype)
+# print(arr2d.ndim)
+
+# zeros = np.zeros((3,4))
+# # 3x4 array of zeros
+# print(zeros)
+
+# ones = np.ones((2,5))
+# #2x5 array of 1
+# print(ones)
+
+# rng = np.arange(0,50,5)
+# #[o,5,10,15 ......45]
+# print(rng)
          
+# lin = np.linspace(0,1,11)
+# print(lin)
+
+# random = np.random.randint(40,100,(5,3))
+# print(random)
+
+# arr = np.array([10,20,30,40,50])
+# print(arr*2)
+# print(arr+5)
+# print(arr**2)
+
+# marks_2d = np.array([[85,90,78],[72,88,95],[91,76,83]])
+
+# print(np.mean(marks_2d)) #mean of whole array
+# print(np.mean(marks_2d,axis=1)) #mean per row
+# print(np.mean(marks_2d,axis=0)) #mean per coloumn
+# print(np.max(marks_2d)) #max number from 3=2d array
+# print(np.std(marks_2d)) #standard deviation
+
+# arr = np.array([55,82,43,91,67,78,35,83])
+# print(arr[arr>70])
+
+# Pandas
+
+import pandas as pd
+
+data = {
+      'Name': ['Rahul' , 'Priya' , 'Amit' , 'Sneha' , 'Vikram'],
+      'Age': [22,21,23,20,24],
+      'Marks': [85,92,78,83,73],
+      'City': ['Bhopal','Indore','Bhopal','Jabalpur','Indore']
+}
+df = pd.DataFrame(data)
+print(df)
+
+print(df.shape)
+print(df.head(3))
+print(df.dtypes)
+print(df.describe())
+
