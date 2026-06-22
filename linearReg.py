@@ -1,3 +1,4 @@
+#Linear Regression 
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
@@ -30,3 +31,4 @@ plt.xlabel('Study Hours/Day'); plt.ylabel('Exam Marks')
 plt.title('Linear Regression - Study Hours vs MArks')
 plt.legend(); plt.grid(True,alpha=0.3);
 plt.show()
+
